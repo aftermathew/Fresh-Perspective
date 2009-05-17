@@ -8,8 +8,11 @@
 
 
 framework 'QTKit'
+require 'singleton'
 
 class SettingsController
+  include Singleton
+
 	attr_accessor :audio_combo, :video_combo, :refresh_button
 	
 	def initialize
@@ -45,6 +48,5 @@ class SettingsController
 	
 	def refreshClicked(sender)
     reload_devices
-	end
-  
+	end 
 end

@@ -14,6 +14,7 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		C338329F0FBF532B000D89DD /* SettingsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C338329E0FBF532B000D89DD /* SettingsController.rb */; };
+		C33832EF0FBFAF90000D89DD /* VideoController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C33832EE0FBFAF90000D89DD /* VideoController.rb */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FreshPerspective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshPerspective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C338329E0FBF532B000D89DD /* SettingsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SettingsController.rb; sourceTree = "<group>"; };
+		C33832EE0FBFAF90000D89DD /* VideoController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = VideoController.rb; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C33832EE0FBFAF90000D89DD /* VideoController.rb */,
 				C338329E0FBF532B000D89DD /* SettingsController.rb */,
 			);
 			name = Classes;
@@ -166,6 +169,7 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
 				C338329F0FBF532B000D89DD /* SettingsController.rb in Resources */,
+				C33832EF0FBFAF90000D89DD /* VideoController.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
