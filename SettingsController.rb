@@ -9,27 +9,30 @@
 
 framework 'QTKit'
 require 'singleton'
+require 'VideoController'
+
+require 'pp'
 
 class SettingsController
   include Singleton
 
-	attr_accessor :audio_combo, :video_combo, :refresh_button, :glview
-	
-	
-	def initialize
+  attr_accessor :audio_combo, :video_combo, :refresh_button, :glview, :start_button
+
+
+  def initialize
     @audio_devices = []
     @video_devices = []
-	end
-	
-	def awakeFromNib
+  end
+
+  def awakeFromNib
     reload_devices
   end
-	
-	def reload_devices
-	  @audio_devices.clear
-	  @video_devices.clear
-	  
-    QTCaptureDevice.inputDevices.each do |d| 
+
+  def reload_devices
+    @audio_devices.clear
+    @video_devices.clear
+
+    QTCaptureDevice.inputDevices.each do |d|
       if(d.hasMediaType(QTMediaTypeSound))
         @audio_devices << d
       elsif (d.hasMediaType(QTMediaTypeVideo))
@@ -40,14 +43,20 @@ class SettingsController
     update_combo @audio_combo, @audio_devices
     update_combo @video_combo, @video_devices
   end
-	
-	def update_combo combo, devices
-	  combo.removeAllItems
+
+  def update_combo combo, devices
+    combo.removeAllItems
     combo.addItemsWithObjectValues devices.map{ |d| d.localizedDisplayName}
     combo.selectItemAtIndex 0
   end
-	
-	def refreshClicked(sender)
+
+  def refreshClicked(sender)
     reload_devices
-	end 
+  end
+
+  def startClicked(sender)
+    VideoController.instance.device =
+      @video_devices[@video_combo.indexOfSelectedItem]
+    VideoController.instance.openDevice
+  end
 end

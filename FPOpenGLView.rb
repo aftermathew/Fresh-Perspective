@@ -13,7 +13,8 @@ class FPOpenGLView < NSOpenGLView
   attr_accessor :rotX
 
   def init
-    NSLog "#{__FILE__}#{__LINE__}"
+    super
+ #   warn "init was called?"
     @rotX = 0.0
     @color = 0.0
     timer = NSTimer.timerWithTimeInterval(1.0/60.0,
@@ -24,6 +25,7 @@ class FPOpenGLView < NSOpenGLView
 
     NSRunLoop.currentRunLoop.addTimer timer, forMode:NSDefaultRunLoopMode
     NSRunLoop.currentRunLoop.addTimer timer, forMode:NSEventTrackingRunLoopMode
+    self
   end
 
   def initialize
@@ -33,7 +35,7 @@ class FPOpenGLView < NSOpenGLView
   end
 
   def drawObject
-    NSLog "In draw object #{@color}"
+#    NSLog "In draw object #{@color}"
     glColor3d(1.0, @color, 0.35)
 
     glBegin GL_TRIANGLES
@@ -45,6 +47,7 @@ class FPOpenGLView < NSOpenGLView
 
 
   def drawRect bounds
+#    warn "drawRect was called"
     init unless @rotX
     @rotX += 1
     @color += 0.0002
