@@ -16,7 +16,8 @@ require 'pp'
 class SettingsController
   include Singleton
 
-  attr_accessor :audio_combo, :video_combo, :refresh_button, :glview, :start_button
+  attr_accessor :audio_combo, :video_combo, :refresh_button
+  attr_accessor :glview, :start_button, :print_button, :stop_button
 
 
   def initialize
@@ -58,5 +59,13 @@ class SettingsController
     VideoController.instance.device =
       @video_devices[@video_combo.indexOfSelectedItem]
     VideoController.instance.openDevice
+  end
+
+  def printClicked(sender)
+    p VideoController.instance.buffer.class
+  end
+
+  def stopClicked(sender)
+    VideoController.instance.closeDevice
   end
 end

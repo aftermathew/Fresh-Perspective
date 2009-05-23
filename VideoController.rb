@@ -8,19 +8,24 @@
 
 framework 'QTKit'
 require 'singleton'
+require 'pp'
+#import 'VideoDelegate.h'
 
 class VideoController
   include Singleton
 
-  attr_accessor :device
+  attr_accessor :device, :buffer
 
   def initialize
     p "Initializing video controller"
     @device = nil
     @captureSession = QTCaptureSession.new
     @deviceInput = nil
+    @delegate = VideoDelegate.new
+    p @delegate.NameMe
     @captureOutput = QTCaptureVideoPreviewOutput.new
-    @captureOutput.setDelegate self
+    @captureOutput.setDelegate @delegate
+    @buffer = []
   end
 
   def captureOutput(output,
@@ -28,9 +33,6 @@ class VideoController
                     withSampleBuffer:sampleBuffer,
                     fromConnection:connection)
 
-    STDOUT.p "hellO"
-#    pp sampleBuffer.sampleBufferAttributes
-#    warn "hello"
   end
 
 
@@ -69,4 +71,8 @@ class VideoController
     @captureSession.startRunning
   end
 
+
+  def closeDevice
+    @captureSession.stopRunning
+  end
 end

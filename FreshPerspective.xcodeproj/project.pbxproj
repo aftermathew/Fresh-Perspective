@@ -17,6 +17,7 @@
 		C33832EF0FBFAF90000D89DD /* VideoController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C33832EE0FBFAF90000D89DD /* VideoController.rb */; };
 		C3B366860FC1315E002A88D5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B366850FC1315E002A88D5 /* OpenGL.framework */; };
 		C3B3669D0FC13456002A88D5 /* FPOpenGLView.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */; };
+		C3B367FA0FC4FE52002A88D5 /* VideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		C33832EE0FBFAF90000D89DD /* VideoController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = VideoController.rb; sourceTree = "<group>"; };
 		C3B366850FC1315E002A88D5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FPOpenGLView.rb; sourceTree = "<group>"; };
+		C3B367F80FC4FE52002A88D5 /* VideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDelegate.h; sourceTree = "<group>"; };
+		C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C3B367F80FC4FE52002A88D5 /* VideoDelegate.h */,
+				C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */,
 				C33832EE0FBFAF90000D89DD /* VideoController.rb */,
 				C338329E0FBF532B000D89DD /* SettingsController.rb */,
 				C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */,
@@ -189,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				C3B367FA0FC4FE52002A88D5 /* VideoDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
