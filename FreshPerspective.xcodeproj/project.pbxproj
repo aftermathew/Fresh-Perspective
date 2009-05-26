@@ -14,10 +14,10 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		C338329F0FBF532B000D89DD /* SettingsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C338329E0FBF532B000D89DD /* SettingsController.rb */; };
-		C33832EF0FBFAF90000D89DD /* VideoController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C33832EE0FBFAF90000D89DD /* VideoController.rb */; };
+		C38151C70FCB6F0500F28356 /* VideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38151C60FCB6F0500F28356 /* VideoDelegate.m */; };
+		C38151DD0FCB70D000F28356 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38151DC0FCB70D000F28356 /* QTKit.framework */; };
 		C3B366860FC1315E002A88D5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B366850FC1315E002A88D5 /* OpenGL.framework */; };
 		C3B3669D0FC13456002A88D5 /* FPOpenGLView.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */; };
-		C3B367FA0FC4FE52002A88D5 /* VideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,11 +33,11 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FreshPerspective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshPerspective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C338329E0FBF532B000D89DD /* SettingsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SettingsController.rb; sourceTree = "<group>"; };
-		C33832EE0FBFAF90000D89DD /* VideoController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = VideoController.rb; sourceTree = "<group>"; };
+		C38151C50FCB6F0500F28356 /* VideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDelegate.h; sourceTree = "<group>"; };
+		C38151C60FCB6F0500F28356 /* VideoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDelegate.m; sourceTree = "<group>"; };
+		C38151DC0FCB70D000F28356 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		C3B366850FC1315E002A88D5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FPOpenGLView.rb; sourceTree = "<group>"; };
-		C3B367F80FC4FE52002A88D5 /* VideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDelegate.h; sourceTree = "<group>"; };
-		C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +48,7 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */,
 				C3B366860FC1315E002A88D5 /* OpenGL.framework in Frameworks */,
+				C38151DD0FCB70D000F28356 /* QTKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +58,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C3B367F80FC4FE52002A88D5 /* VideoDelegate.h */,
-				C3B367F90FC4FE52002A88D5 /* VideoDelegate.m */,
-				C33832EE0FBFAF90000D89DD /* VideoController.rb */,
+				C38151C50FCB6F0500F28356 /* VideoDelegate.h */,
+				C38151C60FCB6F0500F28356 /* VideoDelegate.m */,
 				C338329E0FBF532B000D89DD /* SettingsController.rb */,
 				C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */,
 			);
@@ -69,6 +69,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C38151DC0FCB70D000F28356 /* QTKit.framework */,
 				C3B366850FC1315E002A88D5 /* OpenGL.framework */,
 				4DE3BE130D8651D900ECA448 /* MacRuby.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
@@ -181,7 +182,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				4DE339F70D74FCDD00ADB6EE /* rb_main.rb in Resources */,
 				C338329F0FBF532B000D89DD /* SettingsController.rb in Resources */,
-				C33832EF0FBFAF90000D89DD /* VideoController.rb in Resources */,
 				C3B3669D0FC13456002A88D5 /* FPOpenGLView.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,7 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				C3B367FA0FC4FE52002A88D5 /* VideoDelegate.m in Sources */,
+				C38151C70FCB6F0500F28356 /* VideoDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

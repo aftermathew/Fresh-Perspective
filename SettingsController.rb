@@ -9,7 +9,7 @@
 
 framework 'QTKit'
 require 'singleton'
-require 'VideoController'
+#require 'VideoDelegate'
 
 require 'pp'
 
@@ -56,16 +56,21 @@ class SettingsController
   end
 
   def startClicked(sender)
-    VideoController.instance.device =
-      @video_devices[@video_combo.indexOfSelectedItem]
-    VideoController.instance.openDevice
+    device = @video_devices[@video_combo.indexOfSelectedItem]
+    #VideoController.instance.openDevice
+	
+	@video = MyQTVideoControl.new
+	@video.prepareDevice device
+	@video.startCapture
+	
   end
 
   def printClicked(sender)
-    p VideoController.instance.buffer.class
+   # VideoController.instance.startRunning
   end
 
   def stopClicked(sender)
-    VideoController.instance.closeDevice
+   # VideoController.instance.closeDevice
+   @video.stopCapture
   end
 end

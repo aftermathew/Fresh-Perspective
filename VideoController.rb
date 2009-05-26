@@ -11,7 +11,7 @@ require 'singleton'
 require 'pp'
 #import 'VideoDelegate.h'
 
-class VideoController
+class VideoController < QTCaptureVideoPreviewOutput
   include Singleton
 
   attr_accessor :device, :buffer
@@ -22,17 +22,19 @@ class VideoController
     @captureSession = QTCaptureSession.new
     @deviceInput = nil
     @delegate = VideoDelegate.new
-    p @delegate.NameMe
     @captureOutput = QTCaptureVideoPreviewOutput.new
-    @captureOutput.setDelegate @delegate
+	@captureOutput.setDelegate self
     @buffer = []
   end
 
   def captureOutput(output,
-                    didOutputVideoFrame:ouputFrame,
+                    didOutputVideoFrame:outputFrame,
                     withSampleBuffer:sampleBuffer,
                     fromConnection:connection)
-
+	begin 
+		p "hi"
+	rescue
+	end
   end
 
 
@@ -68,7 +70,11 @@ class VideoController
       return;
     end
 
-    @captureSession.startRunning
+	p "starting"
+  end
+  
+  def startRunning
+	@captureSession.startRunning
   end
 
 
