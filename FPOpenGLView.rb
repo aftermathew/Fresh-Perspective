@@ -8,13 +8,17 @@
 
 framework 'OpenGL'
 framework 'Cocoa'
+framework 'QuickTime'
+framework 'QTKit'
+framework 'glut'
+framework 'QuickTime'
 
 class FPOpenGLView < NSOpenGLView
   attr_accessor :rotX
 
   def init
     super
- #   warn "init was called?"
+
     @rotX = 0.0
     @color = 0.0
     timer = NSTimer.timerWithTimeInterval(1.0/60.0,
@@ -25,7 +29,26 @@ class FPOpenGLView < NSOpenGLView
 
     NSRunLoop.currentRunLoop.addTimer timer, forMode:NSDefaultRunLoopMode
     NSRunLoop.currentRunLoop.addTimer timer, forMode:NSEventTrackingRunLoopMode
+
+    CGDirectDisplayID   displayID = CGMainDisplayID()
+    error = CVDisplayLinkCreateWithCGDisplay(displayID, @displayLink);
+    if(error)
+      NSLog("DisplayLink created with error:%d", error)
+      @displayLink = NULL
+      return
+    end
+    error = CVDisplayLinkSetOutputCallback(@displayLink, MyDisplayLinkCallback, self);
+    if(error)
+      NSLog("DisplayLink callback error:%d",error)
+      @displayLink = NULL
+      return
+    end
     self
+  end
+
+
+  def MyDisplayLinkCallback (displayLink,inNow, inOutputTime, flagsIn, flagsOut, displayLinkContext)
+    NSLog "callback is called"
   end
 
   def initialize

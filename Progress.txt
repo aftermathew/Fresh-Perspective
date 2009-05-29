@@ -1,0 +1,12 @@
+Week of May 22 - 29
+1) Spent sunday/monday rewriting the movie stuff to work in objective c.
+2) Tuesday night tried to find examples and grok code in quicktime.
+I have not grokked the fullness, but currently looking at
+  - http://developer.apple.com/samplecode/QTCoreVideo101/index.html
+  - http://developer.apple.com/samplecode/QTCoreVideo102/index.html
+
+3) Reading the QTCoreVideo intro docs.  
+   -http://developer.apple.com/documentation/GraphicsImaging/Conceptual/CoreVideo/CVProg_Concepts/CVProg_Concepts.html#//apple_ref/doc/uid/TP40001536-CH202-BABJDFHJ
+   -http://developer.apple.com/documentation/GraphicsImaging/Conceptual/CoreVideo/CVProg_Tasks/CVProg_Tasks.html
+
+4)  Was able to successfully in another project route the camera into an openGL animation.  This was a major step as I now have a handle on all the needed components.  However the code is all objective C and it's total GARBAGE.  Just enough changes to my own existing code and a sample application to get it to work.  This w/e I intend on taking this proof of concept code and making it a lot more stable.  

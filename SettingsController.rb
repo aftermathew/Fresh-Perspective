@@ -9,7 +9,7 @@
 
 framework 'QTKit'
 require 'singleton'
-#require 'VideoDelegate'
+
 
 require 'pp'
 
@@ -38,6 +38,7 @@ class SettingsController
         @audio_devices << d
       elsif (d.hasMediaType(QTMediaTypeVideo))
         @video_devices << d
+        d.formatDescriptions.each{ |desc| pp desc.localizedFormatSummary }
       end
     end
 
@@ -58,11 +59,11 @@ class SettingsController
   def startClicked(sender)
     device = @video_devices[@video_combo.indexOfSelectedItem]
     #VideoController.instance.openDevice
-	
-	@video = MyQTVideoControl.new
+
+	@video = FPQTVideoControl.new
 	@video.prepareDevice device
 	@video.startCapture
-	
+
   end
 
   def printClicked(sender)

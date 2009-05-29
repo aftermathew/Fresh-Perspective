@@ -14,7 +14,10 @@
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		C338329F0FBF532B000D89DD /* SettingsController.rb in Resources */ = {isa = PBXBuildFile; fileRef = C338329E0FBF532B000D89DD /* SettingsController.rb */; };
-		C38151C70FCB6F0500F28356 /* VideoDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C38151C60FCB6F0500F28356 /* VideoDelegate.m */; };
+		C350DB3C0FCF93FD00B73286 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C350DB390FCF93FD00B73286 /* QuartzCore.framework */; };
+		C350DB3D0FCF93FD00B73286 /* QuickTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C350DB3A0FCF93FD00B73286 /* QuickTime.framework */; };
+		C350DB3E0FCF93FD00B73286 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C350DB3B0FCF93FD00B73286 /* GLUT.framework */; };
+		C38151C70FCB6F0500F28356 /* FPQTVideoControl.m in Sources */ = {isa = PBXBuildFile; fileRef = C38151C60FCB6F0500F28356 /* FPQTVideoControl.m */; };
 		C38151DD0FCB70D000F28356 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38151DC0FCB70D000F28356 /* QTKit.framework */; };
 		C3B366860FC1315E002A88D5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B366850FC1315E002A88D5 /* OpenGL.framework */; };
 		C3B3669D0FC13456002A88D5 /* FPOpenGLView.rb in Resources */ = {isa = PBXBuildFile; fileRef = C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */; };
@@ -33,8 +36,11 @@
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* FreshPerspective.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreshPerspective.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C338329E0FBF532B000D89DD /* SettingsController.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = SettingsController.rb; sourceTree = "<group>"; };
-		C38151C50FCB6F0500F28356 /* VideoDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDelegate.h; sourceTree = "<group>"; };
-		C38151C60FCB6F0500F28356 /* VideoDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDelegate.m; sourceTree = "<group>"; };
+		C350DB390FCF93FD00B73286 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		C350DB3A0FCF93FD00B73286 /* QuickTime.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickTime.framework; path = /System/Library/Frameworks/QuickTime.framework; sourceTree = "<absolute>"; };
+		C350DB3B0FCF93FD00B73286 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		C38151C50FCB6F0500F28356 /* FPQTVideoControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPQTVideoControl.h; sourceTree = "<group>"; };
+		C38151C60FCB6F0500F28356 /* FPQTVideoControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPQTVideoControl.m; sourceTree = "<group>"; };
 		C38151DC0FCB70D000F28356 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
 		C3B366850FC1315E002A88D5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
 		C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = FPOpenGLView.rb; sourceTree = "<group>"; };
@@ -49,6 +55,9 @@
 				4DE3BE140D8651D900ECA448 /* MacRuby.framework in Frameworks */,
 				C3B366860FC1315E002A88D5 /* OpenGL.framework in Frameworks */,
 				C38151DD0FCB70D000F28356 /* QTKit.framework in Frameworks */,
+				C350DB3C0FCF93FD00B73286 /* QuartzCore.framework in Frameworks */,
+				C350DB3D0FCF93FD00B73286 /* QuickTime.framework in Frameworks */,
+				C350DB3E0FCF93FD00B73286 /* GLUT.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,8 +67,8 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C38151C50FCB6F0500F28356 /* VideoDelegate.h */,
-				C38151C60FCB6F0500F28356 /* VideoDelegate.m */,
+				C38151C50FCB6F0500F28356 /* FPQTVideoControl.h */,
+				C38151C60FCB6F0500F28356 /* FPQTVideoControl.m */,
 				C338329E0FBF532B000D89DD /* SettingsController.rb */,
 				C3B3669C0FC13456002A88D5 /* FPOpenGLView.rb */,
 			);
@@ -69,6 +78,9 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C350DB390FCF93FD00B73286 /* QuartzCore.framework */,
+				C350DB3A0FCF93FD00B73286 /* QuickTime.framework */,
+				C350DB3B0FCF93FD00B73286 /* GLUT.framework */,
 				C38151DC0FCB70D000F28356 /* QTKit.framework */,
 				C3B366850FC1315E002A88D5 /* OpenGL.framework */,
 				4DE3BE130D8651D900ECA448 /* MacRuby.framework */,
@@ -194,7 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
-				C38151C70FCB6F0500F28356 /* VideoDelegate.m in Sources */,
+				C38151C70FCB6F0500F28356 /* FPQTVideoControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

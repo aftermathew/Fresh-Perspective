@@ -41,7 +41,7 @@ class VideoController < QTCaptureVideoPreviewOutput
   def errorOccured errorString
       warn errorString
       @device.close
-      @deviceInput = nil
+FP      @deviceInput = nil
   end
 
   def openDevice
